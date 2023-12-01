@@ -7,6 +7,7 @@ var router = express.Router();
 let recipie = require('../models/recipie');
 
 /* Displaying */
+//*displays recipie on page//*
 module.exports.DisplayRecipieList = async (req,res,next)=>{
     try{
        const recipielist = await recipie.find();

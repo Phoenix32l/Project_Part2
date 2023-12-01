@@ -1,10 +1,11 @@
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 var router = express.Router();
-
+// adding passport session and other models
 let app = express();
 let session = require('express-session');
 let passport = require('passport');
@@ -34,7 +35,9 @@ mongoose.connect(DB.URI);
 mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',()=>{console.log("Mongo DB is connected")});
 //mongoose.connect(DB.URI);
+
 // Set-up Express-Session
+// setting up the session
 app.use(session({
   secret:"SomeSecret",
   saveUninitialized:false,
@@ -47,6 +50,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser()); 
 
+// app.use for passport
 // initialize the passport
 app.use(passport.initialize());
 app.use(passport.session());
