@@ -1,0 +1,80 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+<!--content for the edit page !--> 
+
+
+<!--creating a form!--> 
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6" width=800px height=900px>
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+
+                    <label for="nameTextField">Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter a Recipie"
+                    name="name" 
+                    value = "<%= recipie.name %>" 
+                    required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="ingridientsTextField">Ingridients</label>
+                    <input type="text" class="form-control"
+                    id="ingridientsTextField"
+                    placeholder="Enter the ingridients "
+                    name="ingridients" 
+                    value ="<%= recipie.ingridients %>" 
+                    required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextField">Description</label>
+                    <input type="text" class="form-control"
+                    id="descriptionTextField"
+                    placeholder="Enter a description"
+                    name="description" required>
+                    <%= recipie.description %> 
+                </div>
+
+                <div class="form-group">
+                    <label for="instructionsTextArea">Instructions</label>
+                    <textarea type="text" class="form-control"
+                    id="instructionsTextArea"
+                    placeholder="Enter the instructions"
+                    name="instructions" 
+                    value ="<%= recipie.instructions %>" 
+                    required> 
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="durationTextField">Duration</label>
+                    <input type="text" class="form-control"
+                    id="durationTextField"
+                    placeholder="Enter duration"
+                    name="duration" 
+                    value ="<%= recipie.duration%>" 
+                    required> 
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/recipielist" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<% include ../partials/bottom_navigation.ejs %>
+<% include ../partials/footer.ejs %>
