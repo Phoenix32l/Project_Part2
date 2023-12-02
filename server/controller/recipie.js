@@ -100,7 +100,7 @@ module.exports.ProcessEditRecipie = (req,res,next)=>{
         let updatedRecipie = recipie({
             "_id":id,
             "name":req.body.name,
-            "ingridients":req.body.ingridents,
+            "ingridients":req.body.ingridients,
             "description":req.body.description,
             "instructions":req.body.instructions,
             "duration":req.body.duration
