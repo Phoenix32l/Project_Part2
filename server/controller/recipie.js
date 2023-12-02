@@ -53,7 +53,7 @@ module.exports.ProcessRecipie = (req,res,next)=>{
     try{
         let newRecipie= recipie({
             "name":req.body.name,
-            "ingridents":req.body.ingridents,
+            "ingridients":req.body.ingridients,
             "description":req.body.description,
             "instructions":req.body.instructions,
             "duration":req.body.duration
