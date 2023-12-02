@@ -5,6 +5,8 @@ let DB = require('../config/db');
 let userModel = require('../models/user');
 let User = userModel.User;
 
+// Login Routing
+
 router.get('/login',function(req,res,next){
   if(!req.user)
   {
@@ -43,6 +45,8 @@ router.post('/login',function(req,res,next){
       })
   })(req,res,next)
 })
+
+// Register Routing
 
 router.get('/register',function(req,res,next){
   if(!req.user)
@@ -89,6 +93,8 @@ router.post('/register', function(req,res,next){
     }
   })
 })
+
+// Logout Routing
 
 router.get('/logout',function(req,res,next){
   req.logout(function(err){
