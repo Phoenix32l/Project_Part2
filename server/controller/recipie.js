@@ -1,6 +1,6 @@
 /* CRUD OPERATIONS*/
 // Read Operation
-// Get route for the book list
+// Get route for the list
 
 var express = require('express');
 var router = express.Router();
