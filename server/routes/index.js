@@ -41,7 +41,7 @@ router.post('/login',function(req,res,next){
         {
           return next(err)
         }
-        return res.redirect('/recipielist');
+        return res.redirect('/recipelist');
       })
   })(req,res,next)
 })
@@ -88,7 +88,7 @@ router.post('/register', function(req,res,next){
     }
     else{
       return passport.authenticate('local')(req,res,()=>{
-        res.redirect('/recipielist');
+        res.redirect('/recipelist');
       })
     }
   })
@@ -116,12 +116,7 @@ router.get('/', function(req, res, next) {
 router.get('/home', function(req, res, next) {
   res.render('home', { title: 'Home',displayName: req.user ? req.user.displayName:'' });
 });
-
-
-/* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About',displayName: req.user ? req.user.displayName:''});
-});
+ 
 
 /* GET project page. */
 router.get('/projects', function(req, res, next) {

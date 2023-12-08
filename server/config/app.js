@@ -57,11 +57,11 @@ app.use(passport.session());
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let recipieRouter = require('../routes/recipie');
+let recipeRouter = require('../routes/recipe');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/recipielist', recipieRouter);
+app.use('/recipelist', recipeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -14,21 +14,12 @@
                     <label for="nameTextField">Name</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
-                    placeholder="Enter a Recipie"
+                    placeholder="Enter a Recipe"
                     name="name" 
-                    value = "<%= recipie.name %>" 
+                    value = "<%= recipe.name %>" 
                     required> 
                 </div>
 
-                <div class="form-group">
-                    <label for="ingridientsTextField">Ingridients</label>
-                    <input type="text" class="form-control"
-                    id="ingridientsTextField"
-                    placeholder="Enter the ingridients "
-                    name="ingridients" 
-                    value ="<%= recipie.ingridients %>" 
-                    required> 
-                </div>
 
                 <div class="form-group">
                     <label for="descriptionTextField">Description</label>
@@ -36,19 +27,10 @@
                     id="descriptionTextField"
                     placeholder="Enter a description"
                     name="description" required>
-                    <%= recipie.description %> 
+                    <%= recipe.description %> 
                 </div>
 
-                <div class="form-group">
-                    <label for="instructionsTextArea">Instructions</label>
-                    <textarea type="text" class="form-control"
-                    id="instructionsTextArea"
-                    placeholder="Enter the instructions"
-                    name="instructions" 
-                    value ="<%= recipie.instructions %>" 
-                    required> 
-                    </textarea>
-                </div>
+    
 
                 <div class="form-group">
                     <label for="durationTextField">Duration</label>
@@ -56,14 +38,14 @@
                     id="durationTextField"
                     placeholder="Enter duration"
                     name="duration" 
-                    value ="<%= recipie.duration%>" 
+                    value ="<%= recipe.duration%>" 
                     required> 
                 </div>
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
-                    <a href="/recipielist" class="btn btn-warning">
+                    <a href="/recipelist" class="btn btn-warning">
                         <i class="fas fa-undo"></i> Cancel</a>
 
             </form>

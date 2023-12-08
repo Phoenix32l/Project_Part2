@@ -2,9 +2,9 @@
 <% include ../partials/main_nav.ejs %>
 
 <script>
-  function handleDelete(recipiesid) {
-    if (confirm('are you sure you want to delete this recipie')) {
-      fetch(/recipielist/delete/${recipiesid}, {
+  function handleDelete(recipesid) {
+    if (confirm('are you sure you want to delete this recipe')) {
+      fetch(/recipelist/delete/${recipesid}, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
@@ -30,43 +30,43 @@
         <div class="offset-md-1 col-md-10">
             <h1><% title %> </h1>        
 
-            <a href ="/recipielist/add" class = "btn btn-primary" role=button> 
-            <i class = "fas fa-plus-circle"> </i> Add a Recipie
+            <a href ="/recipelist/add" class = "btn btn-primary" role=button> 
+            <i class = "fas fa-plus-circle"> </i> Add a Recipe
             </a> 
             <br> 
         
         <br>
-        <table class="table table-bordered table-striped table-hover">
-            <tr class="d-flex">
-                <th class="text-center col-1">Name</th>
-                <th class="text-center col-3">Ingridients</th>
-                <th class="text-center col-3">Description</th>
-                <th class="text-center col-3">Instructions</th>
-                <th class="text-center col-1">Duration</th>
-                <th class="text-center col-1"></th>
-                <th class="text-center col-1"></th>
-            </tr>
-            <% for(let count=0;count<recipielist.length;count++) { %>    
-            <tr class="d-flex">
-                <td class="text-center col-1"><%= recipielist[count].name%></td>
-                <td class="text-center col-3"><%= recipielist[count].ingridients%></td>
-                <td class="text-center col-3"><%= recipielist[count].description %></td>
-                <td class="text-center col-3"><%= recipielist[count].instructions%></td>
-                <td class="text-center col-1"><%= recipielist[count].duration%></td>
-                 <td class="text-center col-1">
-                 <a href="/recipielist/edit/<%= recipielist[count]._id %>"
-                 class= "btn btn-primary">
-                 <i class="fa-solid fa-pencil"></i> Edit </a> 
-                 </td>
-
-                <td class="text-center col-1">
-                 <a href="/recipielist/delete/<%= recipielist[count]._id %>"
-                 class= "btn btn-danger">
-                 <i class="fa-solid fa-trash"></i> Delete </a> 
-                 </td>
-               
-            <% } %>
-        </table>
+        <table class="table table-bordered table-striped table-hover table-dark">
+          <thead>
+              <tr>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Description</th>
+                  <th class="text-center">Duration</th>
+                  <th class="text-center"></th>
+                  <th class="text-center"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <% for(let count=0; count < recipelist.length; count++) { %>    
+                  <tr>
+                      <td class="text-center"><%= recipelist[count].name %></td>
+                      <td class="text-center"><%= recipelist[count].description %></td>
+                      <td class="text-center"><%= recipelist[count].duration %></td>
+                      <td class="text-center">
+                          <a href="/recipelist/edit/<%= recipelist[count]._id %>" class="btn btn-primary">
+                              <i class="fa-solid fa-pencil"></i> Edit
+                          </a> 
+                      </td>
+                      <td class="text-center">
+                          <a href="/recipelist/delete/<%= recipelist[count]._id %>" class="btn btn-danger">
+                              <i class="fa-solid fa-trash"></i> Delete
+                          </a> 
+                      </td>
+                  </tr>
+              <% } %>
+          </tbody>
+      </table>
+      
     </div>
     </div>
 </main>

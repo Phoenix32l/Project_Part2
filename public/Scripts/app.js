@@ -10,7 +10,7 @@
             button.addEventListener('click', (event) => {
                 if (!confirm("Are you sure you would like to delete?")) {
                     event.preventDefault();
-                    window.location.assign('/recipielist');
+                    window.location.assign('/recipelist');
                 }
             });
         }

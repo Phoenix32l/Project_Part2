@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-">
   <div class="container-fluid">
-    <a class="navbar-brand" type="button" href="/home">Lahori Kitchen</a>
+    <a class="navbar-brand logo" type="button" href="/home">Lahori Kitchen</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,16 +20,6 @@
         
 
         <li class="nav-item">
-        <% if (title=="About") { %>
-          <a class="nav-link active" aria-current="page" href="/about">
-        <% } else { %>
-        <a class="nav-link" href="/about">
-        <%} %> 
-          <i class="fa-solid fa-person"></i>About</a>
-        </li>
-        
-
-      <li class="nav-item">
         <% if (title=="Projects") { %>
           <a class="nav-link active" aria-current="page" href="/projects">
         <% } else { %>
@@ -38,17 +28,17 @@
           <i class="fa-solid fa-list-check"></i>Projects</a>
         </li>
 
-       <li class="nav-item">
-        <% if (title=="Recipie List") { %>
-          <a class="nav-link active" aria-current="page" href="/recipielist">
+        <li class="nav-item">
+        <% if (title=="Recipe List") { %>
+          <a class="nav-link active" aria-current="page" href="/recipelist">
         <% } else { %>
-        <a class="nav-link" href="/recipielist">
+        <a class="nav-link" href="/recipelist">
         <%} %> 
-          <i class="fa-solid fa-utensils"></i></i>Recipie</a>
+          <i class="fa-solid fa-utensils"></i></i>Recipe</a>
         </li>
 
 
-      <li class="nav-item">
+       <li class="nav-item">
         <% if (title=="Contact") { %>
           <a class="nav-link active" aria-current="page" href="/contact">
         <% } else { %>

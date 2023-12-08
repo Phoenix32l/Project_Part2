@@ -4,61 +4,31 @@
 
 <div class="container">
     <div class="row">
-        <div class="offset-md-3 col-md-6" width=700px height=800px>
-
-        
+        <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
-
             <form class="form" method="POST">
                 <div class="form-group">
                     <label for="nameTextField">Name</label>
-                    <input type="text" class="form-control"
-                    id="nameTextField"
-                    placeholder="Enter a Name"
-                    name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="ingridientsTextField">Ingridients</label>
-                    <input type="text" class="form-control"
-                    id="ingridientsTextField"
-                    placeholder="Enter the Ingridients"
-                    name="ingridients" required>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter a Name" name="name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="descriptionTextField">Description</label>
-                    <input type="text" class="form-control"
-                    id="descriptionTextField"
-                    placeholder="Enter a description"
-                    name="description" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="instructionsTextArea">Instructions</label>
-                    <textarea type="text" class="form-control"
-                    id="instructionsTextArea"
-                    placeholder="Enter the Instructions"
-                    name="instructions" required></textarea>
+                    <input type="text" class="form-control" id="descriptionTextField" placeholder="Enter a description" name="description" required>
                 </div>
 
                 <div class="form-group">
                     <label for="durationTextField">Duration</label>
-                    <input type="text" class="form-control"
-                    id="durationTextField"
-                    placeholder="Enter the duration"
-                    name="duration" required>
+                    <input type="text" class="form-control" id="durationTextField" placeholder="Enter the duration" name="duration" required>
                 </div>
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
-                
-                    <a href="/recipielist" class="btn btn-warning">
-                        <i class="fas fa-undo"></i> Cancel</a>
 
+                <a href="/recipelist" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
             </form>
         </div>
-
     </div>
 </div>
 
